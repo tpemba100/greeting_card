@@ -8,7 +8,19 @@
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/CSSRulePlugin.min.js"></script>
-
+    <script>
+      function copyToClipboard(text) {
+        console.log("https://phurba-wedding.vercel.app/" + text);
+        navigator.clipboard.writeText(
+          `https://phurba-wedding.vercel.app/${text}.html`
+        );
+        goToPage(`${text}.html`);
+      }
+      function goToPage(page) {
+        // Navigate to the specified page
+        window.location.href = page;
+      }
+    </script>
     <title>Phurba & Pasang Wedding</title>
   </head>
   <body>
@@ -23,12 +35,27 @@
         <div class="envelope" onClick="openCard()"></div>
 
         <div class="letter">
+          <!-- <span class="close" onclick="event.stopPropagation(); closeCard()" -->
+          <!-- <span class="close" onclick="event.stopPropagation(); closeCard()"
+            >x</span
+          > -->
           <div class="body" onclick="event.stopPropagation(); closeCard()">
             <a class="d_link" href="greeting_img.jpg" download> DOWNLOAD </a>
           </div>
         </div>
         <div class="shadow"></div>
       </div>
+    </div>
+    <div class="list_link">
+      <p class="clickable-text" onclick="copyToClipboard(`chawang-renjen`)">
+        chawang_renjen
+      </p>
+      <p class="clickable-text" onclick="copyToClipboard(`sharmili_lama`)">
+        sharmili_lama
+      </p>
+      <p class="clickable-text" onclick="copyToClipboard(`tsering_pemba`)">
+        tsering_pemba
+      </p>
     </div>
   </body>
 </html>

@@ -180,7 +180,7 @@
   position: absolute;
   /* display: flex; */
   z-index: 1;
-  top: 43%;
+  top: 44%;
   animation: fadeAnimation 6s infinite;
   color: whitesmoke;
   font-family: "Domine", serif;
@@ -193,6 +193,9 @@
   text-align: center;
 }
 
+.list_link {
+  margin-bottom: 2rem;
+}
 @keyframes fadeAnimation {
   0% {
     opacity: 0.6;
