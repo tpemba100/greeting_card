@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .to(".d_link", {
       duration: 0.3,
-      ease: "back.out(.4)",
+      ease: "back.out(.3)",
       rotate: 90,
-      translateX: -170,
+      translateX: -160,
       fontSize: 13,
     })
     .to(".d_link", {
@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   t2 = gsap.timeline({ paused: true });
   t2.to(".shadow", {
-    delay: 1.4,
+    delay: 1,
     width: 450,
     boxShadow: "-75px 150px 10px 5px #eeeef3",
     ease: "back.out(.2)",
-    duration: 0.7,
+    duration: 0.4,
     display: none,
   });
 });
@@ -62,4 +62,19 @@ function openCard() {
 function closeCard() {
   t1.reverse();
   t2.reverse();
+}
+
+function copyURL() {
+  var currentURL = window.location.href;
+
+  navigator.clipboard
+    .writeText(currentURL)
+    .then(function () {
+      console.log("URL copied to clipboard: " + currentURL);
+      // You can display a success message or perform other actions here
+    })
+    .catch(function (error) {
+      console.error("Failed to copy URL to clipboard: " + error);
+      // You can display an error message or handle the error in some way here
+    });
 }
