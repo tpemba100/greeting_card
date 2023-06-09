@@ -14,11 +14,9 @@
         navigator.clipboard.writeText(
           `https://phurba-wedding.vercel.app/${text}.html`
         );
-        goToPage(`${text}.html`);
       }
       function goToPage(page) {
-        // Navigate to the specified page
-        window.location.href = page;
+        window.location.href = page + ".html";
       }
     </script>
     <title>Phurba & Pasang Wedding</title>
@@ -49,14 +47,23 @@
       </div>
     </div>
     <div class="list_link">
-      <p class="clickable-text" onclick="copyToClipboard(`chawang-renjen`)">
-        chawang renjen
+      <p class="clickable-text">
+        <span onclick="goToPage(`sharmili-lama`)">sharmili lama</span>
+        <span class="copyLink" onclick="copyToClipboard(`sharmili-lama`)"
+          >COPY</span
+        >
       </p>
-      <p class="clickable-text" onclick="copyToClipboard(`sharmili-lama`)">
-        sharmili lama
+      <p class="clickable-text">
+        <span onclick="goToPage(`chawang-renjen`)">chawang renjen</span>
+        <span class="copyLink" onclick="copyToClipboard(`chawang-renjen`)"
+          >COPY</span
+        >
       </p>
-      <p class="clickable-text" onclick="copyToClipboard(`tsering-pemba`)">
-        tsering pemba
+      <p class="clickable-text">
+        <span onclick="goToPage(`tsering-pemba`)">tsering pemba</span>
+        <span class="copyLink" onclick="copyToClipboard(`tsering-pemba`)"
+          >COPY</span
+        >
       </p>
     </div>
   </body>
