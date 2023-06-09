@@ -179,12 +179,15 @@
 .instruction {
   position: absolute;
   /* display: flex; */
-  z-index: 1;
-  top: 44%;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: fadeAnimation 6s infinite;
   color: whitesmoke;
   font-family: "Domine", serif;
-  font-size: 15px;
+  font-size: 30px;
+  cursor: pointer;
 }
 .clickable-text {
   font-size: 1.3rem;
