@@ -10,13 +10,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/CSSRulePlugin.min.js"></script>
     <script>
       function copyToClipboard(text) {
-        console.log("https://phurba-wedding.vercel.app/" + text);
         navigator.clipboard.writeText(
           `https://phurba-wedding.vercel.app/${text}.html`
         );
       }
+      function copyToClipboardCustom(text) {
+        navigator.clipboard.writeText(
+          `https://phurba-wedding.vercel.app/${text}`
+        );
+      }
       function goToPage(page) {
         window.location.href = page + ".html";
+        console.log(page)
+      }
+      function goToPageCustom(page) {
+        window.location.href = `https://phurba-wedding.vercel.app/`+page;
+        console.log(page)
       }
     </script>
     <title>Phurba & Pasang Wedding</title>
@@ -213,7 +222,37 @@
       <span onclick="goToPage(`mr_nima_sherpa`)">Mr. Nima Sherpa</span>
       <span class="copyLink" onclick="copyToClipboard(`mr_nima_sherpa`)">COPY</span>
     </p>
+    <!-- person -->
+    <p class="clickable-text">
+      <span onclick="goToPageCustom(`?name=Michael%20and%20Aynsley%20Family`)">Michael & Aynsley Family</span>
+      <span class="copyLink" onclick="copyToClipboardCustom(`?name=Michael%20and%20Aynsley%20Family`)">COPY</span>
+    </p>
+    <!-- person -->
+    <p class="clickable-text">
+      <span onclick="goToPageCustom(`?name=Scott%20and%20Heather%20Family`)">Scott & Heather Family</span>
+      <span class="copyLink" onclick="copyToClipboardCustom(`?name=Scott%20and%20Heather%20Family`)">COPY</span>
+    </p>
+    <!-- person -->
+    <p class="clickable-text">
+      <span onclick="goToPageCustom(`?name=Woody%20and%20Hilla%20Family`)">Woody & Hilla Family</span>
+      <span class="copyLink" onclick="copyToClipboardCustom(`?name=Woody%20and%20Hilla%20Family`)">COPY</span>
+    </p>
     
+     <!-- person -->
+     <p class="clickable-text">
+      <span onclick="goToPageCustom(``)"></span>
+      <span class="copyLink" onclick="copyToClipboardCustom(``)">COPY</span>
+    </p>
+     <!-- person -->
+     <p class="clickable-text">
+      <span onclick="goToPageCustom(``)"></span>
+      <span class="copyLink" onclick="copyToClipboardCustom(``)">COPY</span>
+    </p>
+     <!-- person -->
+     <p class="clickable-text">
+      <span onclick="goToPageCustom(``)"></span>
+      <span class="copyLink" onclick="copyToClipboardCustom(``)">COPY</span>
+    </p>
     </div>
   </body>
 </html>
