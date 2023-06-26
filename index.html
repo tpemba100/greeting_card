@@ -8,12 +8,31 @@
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/CSSRulePlugin.min.js"></script>
-    <script></script>
+    <script>
+      var names = ["Mr Lakpa", "Pemba"];
+
+      function getNameFromURL() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get("name");
+        return name;
+        console.log(name);
+      }
+
+      // Update the displayed name in the HTML page
+      function updateName() {
+        var name = getNameFromURL();
+        var nameElement = document.getElementById("name");
+        if (name) {
+          nameElement.textContent = name;
+        }
+      }
+    </script>
+
     <title>Phurba & Pasang Wedding</title>
   </head>
-  <body>
+  <body onload="updateName()">
     <div class="message">
-      <h3>.....</h3>
+      <h3 id="name">.....</h3>
 
       <h5>We Humbly request your presense in this wedding.</h5>
     </div>
